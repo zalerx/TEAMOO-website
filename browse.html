@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Page</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <header>
+      <h1>My Shop</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="cart.html">Cart</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="product-detail">
+        <img
+          id="product-image"
+          src="assets/images/placeholder.jpg"
+          alt="Product image"
+        />
+        <div class="product-info">
+          <h2 id="product-name">Sample Product</h2>
+          <p id="product-description">This is a sample description.</p>
+          <p><strong>Price:</strong> $<span id="product-price">19.99</span></p>
+          <button id="add-to-cart">Add to Cart</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 My Shop</p>
+    </footer>
+
+    <script src="js/product.js" defer></script>
+    <script src="js/cart.js" defer></script>
+  </body>
+</html>

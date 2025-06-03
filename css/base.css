@@ -1,0 +1,35 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #DDDACB;
+    color: #0B0B0A;
+}
+
+.container {
+    width: 100%;
+    max-width: 1512px;
+    padding: 0 64px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+:root {
+    --primary: #5F5E43;
+    --background: #DDDACB;
+    --text: #333131;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

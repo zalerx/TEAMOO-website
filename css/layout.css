@@ -1,0 +1,165 @@
+/* Header layout */
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav {
+    display: flex;
+    gap: 32px;
+}
+
+/* Hero section layout */
+.hero .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 64px;
+    padding: 112px 64px;
+    
+}
+
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+.cta-group {
+    display: flex;
+    gap: 16px;
+    color: var(--text);
+    
+    
+}
+
+.hero {
+    background: #DDDACB;
+    border-bottom: 2px solid #0B0B0A;
+    padding: 112px 0;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-images {
+    position: relative;
+    gap: 32px;
+    display: flex;
+
+}
+
+.hero-decoration {
+    width: 196px;
+    opacity: 0.5;
+}
+
+.hero-main-image {
+    width: 531px;
+    height: 584px;
+    background: white;
+    border-radius: 27px;
+    border: 2px solid #0B0B0A;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Featured Teas */
+.featured-teas {
+    background: #DDDACB;
+    border-bottom: 2px solid #0B0B0A;
+    padding: 112px 0;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 768px;
+    margin: 0 auto 80px;
+}
+
+.section-subtitle {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    display: inline-block;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    margin-bottom: 64px;
+}
+
+/* Tea Ceremony */
+.tea-ceremony {
+    background: #DDDACB;
+    border-bottom: 2px solid #0B0B0A;
+    padding: 112px 0;
+}
+
+.tea-ceremony .container {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+ 
+}
+
+.ceremony-content {
+    flex: 1;
+    position: relative;
+
+}
+
+.ceremony-image {
+    flex: 1;
+
+}
+
+.ceremony-image img {
+    height: 400px;
+    right: 0;
+    
+    position: absolute;
+
+}
+
+.benefits-list {
+    list-style: none;
+    margin: 24px 0;
+}
+
+.benefits-list li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px 0;
+}
+
+.benefits-list li::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: #0B0B0A;
+    display: inline-block;
+}
+
+/* Blog Section */
+.blog-section {
+    background: #DDDACB;
+    padding: 112px 0;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
+    margin-bottom: 64px;
+}
