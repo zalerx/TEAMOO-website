@@ -99,11 +99,12 @@ function renderCart() {
 // --- Cart Actions ---
 function addToCart(product) {
   const cart = getCart();
+  const qtyToAdd = typeof product.qty === 'number' && product.qty > 0 ? product.qty : 1;
   let item = findCartItem(cart, product.id);
   if (item) {
-    item.qty += 1;
+    item.qty += qtyToAdd;
   } else {
-    cart.push({ ...product, qty: 1 });
+    cart.push({ ...product, qty: qtyToAdd });
   }
   saveCart(cart);
   renderCart();

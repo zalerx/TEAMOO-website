@@ -36,10 +36,16 @@
             <i class="fa-solid fa-magnifying-glass fa-lg"></i>
         </div>
           <div class="cart">
-            <i class="fa-solid fa-cart-shopping fa-lg"></i>
+                    <button class="cart-trigger" aria-label="Open shopping cart">
+        
+                        <i class="fa-solid fa-cart-shopping fa-lg"></i>
+        <span class="cart-badge" aria-live="polite"></span>
+        </button>
           </div>
             <div class="bars"><i class="fa-solid fa-bars fa-xl"></i>
           </div>
+
+
   
       </div>
     </header>
@@ -259,11 +265,7 @@
     </main>
 
 
-  <!-- Cart Trigger (icon/button, e.g. in your header) -->
-<button class="cart-trigger" aria-label="Open shopping cart">
-  🛒
-  <span class="cart-badge" aria-live="polite"></span>
-</button>
+
 
 <!-- Cart Overlay and Panel -->
 <div class="cart-overlay" tabindex="-1" aria-hidden="true"></div>

@@ -122,7 +122,7 @@
 .cart-qty-btn:focus,
 .cart-qty-btn:hover {
   background: #e0e0e0;
-  outline: 2px solid #00796b;
+
 }
 
 .cart-item-qty {
