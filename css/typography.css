@@ -7,17 +7,17 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    font-size: 72px;
-    line-height: 86.4px;
+    font-size: 4.5rem;
+    line-height: 5rem;
 }
 
 h2 {
-    font-size: 52px;
-    line-height: 62.4px;
+    font-size: 3.25rem;
+    line-height: 3.9rem;
 }
 
 p {
-    font-size: 18px;
+    font-size: 1.2rem;
     line-height: 27px;
 }
 

@@ -1,215 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TEAMOO - Premium Tea Experience</title>
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/typography.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/responsive.css">
-</head>
-<body>
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <div class="logo-mark">
-                    <img src="assets/icons/logo1.svg" alt="TEAMOO Logo" ">
-                </div>
-                
-            </div>
-            <nav class="main-nav">
-                <div class="nav-links">
-                    <a href="browse.html">Our Teas</a>
-                    <a href="#">Teawares</a>
-                    <a href="#">Blog</a>
-                    <a href="#">About Us</a>
-                </div>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/typography.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
 
-            </nav>
-            <button class="btn btn-outline btn-small">View Cart</button>
+    <script
+      src="https://kit.fontawesome.com/9709f12457.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <img class="logo" src="assets/icons/logo1.svg" alt="TEAMOO Logo" />
+        <nav class="main-nav">
+          <div class="nav-links">
+            <a href="browse.html">Our Teas</a>
+            <a href="browse.html">Teawares</a>
+            <a href="#">Blog</a>
+            <a href="#">About Us</a>
+          </div>
+        </nav>
+        <div class="icons"> 
+          <div class="cart">
+            <i class="fa-solid fa-cart-shopping fa-lg"></i>
+          </div>
+            <div class="bars">  <i class="fa-solid fa-bars fa-xl"></i>
+          </div>
+          <div class="search">
+            <i class="fa-solid fa-magnifying-glass fa-lg"></i>
         </div>
+      </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Experience the Harmony of Tea</h1>
-                    <p class="hero-subtitle">Indulge in our selection of rare, loose-leaf teas that enrich your senses and connect you with our heritage.</p>
-                    <div class="cta-group">
-                        <button class="btn btn-secondary">Learn More</button>
-                        <button class="btn btn-primary">Shop Now</button>
-                    </div>
-                </div>
-                <div class="hero-images">
-                    <img src="assets/images/proverb vertical.png" alt="Chinese Idiom" class="hero-decoration">
-                    <img src="assets/images/hero-tea.png" alt="Premium loose leaf tea" class="hero-main-image">
-                </div>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1>Experience the Harmony of Tea</h1>
+            <p class="hero-subtitle">
+              Indulge in our selection of rare, loose-leaf teas that enrich your
+              senses and connect you with our heritage.
+            </p>
+            <div class="cta-group">
+              <button class="btn btn-secondary">Learn More</button>
+              <button class="btn btn-primary">Shop Now</button>
             </div>
-        </section>
+          </div>
 
-        <!-- Featured Teas Section -->
-        <section class="featured-teas">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-subtitle">Discover</span>
-                    <h2>Featured Tea</h2>
-                    <p>Explore our exquisite selection of rare teas and wares.</p>
-                </div>
-                
-                <div class="product-grid">
-                    <div>
-                        <img class="product-card" src="assets/images/green-tea.png" alt="Green Tea">
-                        <div class="product-info">
-                            <h3>Green Tea</h3>
-                            <p class="product-type">Loose</p>
-                            <p class="product-price">$55</p>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <img class="product-card" src="assets/images/black-tea.jpg" alt="Black Tea">
-                        <div class="product-info">
-                            <h3>Black Tea</h3>
-                            <p class="product-type">Loose</p>
-                            <p class="product-price">$30</p>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <img class="product-card" src="assets/images/oolong-tea.jpg" alt="Oolong Tea">
-                        <div class="product-info"></div>
-                    
-                            <h3>Oolong Tea</h3>
-                            <p class="product-type">Loose</p>
-                            <p class="product-price">$45</p>
-                    </div>
-                
-                </div>
-                <div style="display: flex; justify-content: center;">
-                    <button class="btn btn-secondary">View all</button>
-                </div>
-        </section>
+          <img
+            src="assets/images/proverb vertical.png"
+            alt="Chinese Idiom"
+            class="hero-decoration"
+          />
+          <img
+            src="assets/images/hero-tea.png"
+            alt="Premium loose leaf tea"
+            class="hero-main-image"
+          />
+        </div>
+      </section>
 
-        <!-- Tea Ceremony Section -->
-        <section class="tea-ceremony">
-            <div class="container">
-                <div class="ceremony-content">
-                    <span class="section-subtitle">Serenity</span>
-                    <h2>Experience the Art of Tea</h2>
-                    <p>Immerse yourself in a traditional Chinese tea ceremony, designed for relaxation and connection. Perfect for social gatherings or personal meditation, this experience invites tranquility into your life.</p>
-                    
-                    <ul class="benefits-list">
-                        <li>Connect with friends over a calming tea ritual</li>
-                        <li>Find peace and mindfulness through tea</li>
-                    </ul>
-                    
-                    <div class="cta-group">
-                        <button class="btn btn-secondary">Learn More</button>
-                        <button class="btn btn-primary">Book Now</button>
-                    </div>
-                </div>
-                
-                <div class="ceremony-image">
-                    <img src="assets/images/teapot.svg" alt="Teapot Vector">
-                </div>
+      <!-- Featured Teas Section -->
+      <section class="featured-teas">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-subtitle">Discover</span>
+            <h2>Featured Tea</h2>
+            <p>Explore our exquisite selection of rare teas and wares.</p>
+          </div>
+
+          <div class="product-grid">
+            <div class="product-card">
+              <img src="assets/images/green-tea.png" alt="Green Tea" />
+              <div class="product-info">
+                <h3>Green Tea</h3>
+                <p class="product-type">Loose</p>
+                <p class="product-price">$30</p>
+              </div>
             </div>
-        </section>
 
-        <!-- Blog Section -->
-        <section class="blog-section">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-subtitle">Blog</span>
-                    <h2>Explore Our Tea Insights</h2>
-                    <p>Discover the world of tea and its benefits.</p>
-                </div>
-                
-                <div class="blog-grid">
-                    <article class="blog-card">
-                        <img src="assets/images/tea-health.jpeg" alt="Health benefits of tea">
-                        <div class="blog-content">
-                            <span class="blog-category">Health</span>
-                            <h3>The Health Benefits of Loose-Leaf Tea</h3>
-                            <p>Learn how loose-leaf tea can enhance your well-being.</p>
-                        </div>
-                    </article>
-                    
-                    <article class="blog-card">
-                        <img src="assets/images/tea-pouring.png" alt="Pouring tea">
-                        <div class="blog-content">
-                            <span class="blog-category">Brewing</span>
-                            <h3>How to Brew the Perfect Cup of Tea</h3>
-                            <p>Master the art of brewing tea for the best flavor.</p>
-                        </div>
-                    </article>
-                </div>
-                
-                  <div style="display: flex; justify-content: center;">
-                    <button class="btn btn-secondary">View all</button>
-                </div>
+            <div class="product-card">
+              <img src="assets/images/black-tea.png" alt="Black Tea" />
+              <div class="product-info">
+                <h3>Black Tea</h3>
+                <p class="product-type">Loose</p>
+                <p class="product-price">$30</p>
+              </div>
             </div>
-        </section>
+
+            <div class="product-card">
+              <img src="assets/images/oolong-tea.png" alt="Oolong Tea" />
+              <div class="product-info">
+                <h3>Oolong Tea</h3>
+                <p class="product-type">Loose</p>
+                <p class="product-price">$45</p>
+              </div>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: center">
+            <button class="btn btn-secondary">View all</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tea Ceremony Section -->
+      <section class="tea-ceremony">
+        <div class="container">
+          <img src="assets/images/tea-ceremony.jpeg" />
+
+          <div class="ceremony-content">
+            <span class="section-subtitle">Serenity</span>
+            <h2>Experience the Art of Tea</h2>
+            <p>
+              Immerse yourself in a traditional Chinese tea ceremony, designed
+              for relaxation and connection. Perfect for social gatherings or
+              personal meditation, this experience invites tranquility into your
+              life.
+            </p>
+            <ul class="benefits-list">
+              <li>Connect with friends over a calming tea ritual</li>
+              <li>Find peace and mindfulness through tea</li>
+            </ul>
+
+            <div class="cta-group">
+              <button class="btn btn-secondary">Learn More</button>
+              <button class="btn btn-primary">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Blog Section -->
+      <section class="blog-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-subtitle">Blog</span>
+            <h2>Explore Our Tea Insights</h2>
+            <p>Discover the world of tea and its benefits.</p>
+          </div>
+
+          <div class="blog-grid">
+            <article class="blog-card">
+              <img
+                src="assets/images/tea-health.jpeg"
+                alt="Health benefits of tea"
+              />
+              <div class="blog-content">
+                <span class="blog-category">Health</span>
+                <h3>The Health Benefits of Loose-Leaf Tea</h3>
+                <p>Learn how loose-leaf tea can enhance your well-being.</p>
+              </div>
+            </article>
+
+            <article class="blog-card">
+              <img src="assets/images/tea-pouring.png" alt="Pouring tea" />
+              <div class="blog-content">
+                <span class="blog-category">Brewing</span>
+                <h3>How to Brew the Perfect Cup of Tea</h3>
+                <p>Master the art of brewing tea for the best flavor.</p>
+              </div>
+            </article>
+          </div>
+
+          <div style="display: flex; justify-content: center">
+            <button class="btn btn-secondary">View all</button>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="logo">
-                <div class="logo-mark">
-                    <img src="assets/icons/logo1.svg" alt="TEAMOO Logo">
-                </div>
-                    </div>
-                    
-                    <div class="footer-contact">
-                        <h4>Address:</h4>
-                        <p>141 Toorak Rd, South Yarra VIC 3141</p>
-                        
-                        <h4>Contact:</h4>
-                        <a href="tel:0455668811">0455 668 811</a>
-                    </div>
-                    
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><span class="icon-facebook"></span></a>
-                        <a href="#" aria-label="Instagram"><span class="icon-instagram"></span></a>
-                        <a href="#" aria-label="Twitter"><span class="icon-twitter"></span></a>
-                        <a href="#" aria-label="Pinterest"><span class="icon-pinterest"></span></a>
-                        <a href="#" aria-label="YouTube"><span class="icon-youtube"></span></a>
-                    </div>
-                </div>
-                
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="browse.html">Shop Now</a></li>
-                        <li><a href="#">Tea Menu</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Tea Ceremony</a></li>
-                    </ul>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="logo">
+              <div class="logo-mark">
+                <img src="assets/icons/logo1.svg" alt="TEAMOO Logo" />
+              </div>
             </div>
-            
-            <div class="footer-bottom">
-                <div class="divider"></div>
-                
-                <div class="footer-legal">
-                    <p>© 2025 TEAMOO. All rights reserved.</p>
-                    
-                    <div class="legal-links">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
-                        <a href="#">Cookies Settings</a>
-                    </div>
-                </div>
+
+            <div class="footer-contact">
+              <h4>Address:</h4>
+              <p>141 Toorak Rd, South Yarra VIC 3141</p>
+
+              <h4>Contact:</h4>
+              <a href="tel:0455668811">0455 668 811</a>
             </div>
+
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"
+                ><span class="icon-facebook"></span
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><span class="icon-instagram"></span
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><span class="icon-twitter"></span
+              ></a>
+              <a href="#" aria-label="Pinterest"
+                ><span class="icon-pinterest"></span
+              ></a>
+              <a href="#" aria-label="YouTube"
+                ><span class="icon-youtube"></span
+              ></a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="browse.html">Shop Now</a></li>
+              <li><a href="#">Tea Menu</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Tea Ceremony</a></li>
+            </ul>
+          </div>
         </div>
+
+        <div class="footer-bottom">
+          <div class="divider"></div>
+          <div class="footer-legal">
+            <p>© 2025 TEAMOO. All rights reserved.</p>
+
+            <div class="legal-links">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
+              <a href="#">Cookies Settings</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>

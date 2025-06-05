@@ -14,7 +14,7 @@ body {
 .container {
     width: 100%;
     max-width: 1512px;
-    padding: 0 64px;
+    padding: 112px 64px;
     margin: 0 auto;
 }
 
@@ -27,6 +27,7 @@ img {
     --primary: #5F5E43;
     --background: #DDDACB;
     --text: #333131;
+    font-size: 16px;
 }
 
 a {
