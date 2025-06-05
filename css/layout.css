@@ -10,8 +10,13 @@
     gap: 32px;
 }
 
+.icons {
+    display: flex;
+    gap: 16px;
+}
+
 .bars {
-    display: none; /* Hide bars icon on larger screens */
+    display: none; 
 }
 
 /* Hero section layout */
@@ -76,25 +81,21 @@
 /* Featured Teas */
 .featured-teas {
     border-bottom: 2px solid #0B0B0A;
-
 }
-
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 48px;
     margin-bottom: 64px;
 }
 
-/* Tea Ceremony */
+/* Tea Ceremony Section*/
 .tea-ceremony {
     background: #DDDACB;
     border-bottom: 2px solid #0B0B0A;
-
     position: relative;
     color: #DDDACB;
-
 }
 
 .tea-ceremony .container {
@@ -156,4 +157,60 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 48px;
     margin-bottom: 64px;
+}
+
+
+/* ---- Product Page ---- */
+
+.description-section .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem;
+    border-bottom: 2px solid #0B0B0A;
+
+}
+
+.info-section .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    align-items: center;
+    gap: 4rem;
+    border-bottom: 2px solid #0B0B0A;
+}
+
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.info-flavour-brewing {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.info-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.product-info {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.product-details summary {
+   font-size: 1.2rem;
+   font-weight: 600;
 }

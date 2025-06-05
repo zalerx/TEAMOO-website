@@ -3,42 +3,174 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product Page</title>
+    <title>Browse Page</title>
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/typography.css" />
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+
+    <script
+      src="https://kit.fontawesome.com/9709f12457.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
+
   <body>
-    <header>
-      <h1>My Shop</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="cart.html">Cart</a>
-      </nav>
+    <header class="header">
+      <div class="container">
+        <a href="index.html"><img class="logo" src="assets/icons/logo1.svg" alt="TEAMOO Logo" /></a>
+        <nav class="main-nav">
+          <div class="nav-links">
+            <a href="browse.html">Our Teas</a>
+            <a href="browse.html">Teawares</a>
+            <a href="#">Blog</a>
+            <a href="#">About Us</a>
+          </div>
+        </nav>
+
+        <div class="icons"> 
+            <div class="search">
+            <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+        </div>
+          <div class="cart">
+            <i class="fa-solid fa-cart-shopping fa-lg"></i>
+          </div>
+            <div class="bars">  <i class="fa-solid fa-bars fa-xl"></i>
+          </div>
+  
+      </div>
     </header>
 
-    <main>
-      <section class="product-detail">
-        <img
-          id="product-image"
-          src="assets/images/placeholder.jpg"
-          alt="Product image"
-        />
-        <div class="product-info">
-          <h2 id="product-name">Sample Product</h2>
-          <p id="product-description">This is a sample description.</p>
-          <p><strong>Price:</strong> $<span id="product-price">19.99</span></p>
-          <button id="add-to-cart">Add to Cart</button>
+
+
+       <section class="browse-teas">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-subtitle">Shop All > Tea > Green Tea</span>
+            <h2>Green Tea</h2>
+            <p>Explore our exquisite selection of rare loose-leaf green teas.</p>
+          </div>
+
+            <div class="product-grid">
+            <a href="product.html">
+              <div class="product-card">
+                <img src="assets/images/green-tea.png" alt="Green Tea" />
+                <div class="product-card-info">
+                  <h4>Green Tea</h4>
+                  <p class="product-type">Loose</p>
+                  <p class="product-price">$30</p>
+                </div>
+              </div>
+            </a>
+
+            <div class="product-card">
+              <img src="assets/images/black-tea.png" alt="Black Tea" />
+              <div class="product-card-info">
+                <h4>Black Tea</h4>
+                <p class="product-type">Loose</p>
+                <p class="product-price">$30</p>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <img src="assets/images/oolong-tea.png" alt="Oolong Tea" />
+              <div class="product-card-info">
+                <h4>Oolong Tea</h4>
+                <p class="product-type">Loose</p>
+                <p class="product-price">$29</p>
+              </div>
+            </div>
+
+                        <div class="product-card">
+              <img src="assets/images/green-tea.png" alt="Green Tea" />
+              <div class="product-card-info">
+                <h4>Herbal Blend</h4>
+                <p class="product-type">Loose</p>
+                <p class="product-price">$33</p>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <img src="assets/images/black-tea.png" alt="Black Tea" />
+              <div class="product-card-info">
+                <h4>Pu-erh Classic</h4>
+                <p class="product-type">Loose</p>
+                <p class="product-price">$29</p>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <img src="assets/images/oolong-tea.png" alt="Oolong Tea" />
+              <div class="product-card-info">
+                <h4>Jasmine Blossom</h4>
+                <p class="product-type">Loose</p>
+                <p class="product-price">$33</p>
+              </div>
+            </div>
+          </div>
+
+          </div>
+
+
+
         </div>
       </section>
-    </main>
 
-    <footer>
-      <p>&copy; 2025 My Shop</p>
+          <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="logo">
+              <div class="logo-mark">
+                <img src="assets/icons/logo1.svg" alt="TEAMOO Logo" />
+              </div>
+            </div>
+
+            <div class="footer-contact">
+              <h4>Address:</h4>
+              <p>141 Toorak Rd, South Yarra VIC 3141</p>
+
+              <h4>Contact:</h4>
+              <a href="tel:0455668811">0455 668 811</a>
+            </div>
+
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"
+                ><i class="fa-brands fa-facebook fa-lg"></i></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fa-brands fa-instagram fa-lg"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+
+            <ul>
+              <li><a href="browse.html">Shop Now</a></li>
+              <li><a href="#">Tea Menu</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Tea Ceremony</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="divider"></div>
+          <div class="footer-legal">
+            <p>© 2025 TEAMOO. All rights reserved.</p>
+
+            <div class="legal-links">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
+              <a href="#">Cookies Settings</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
 
-    <script src="js/product.js" defer></script>
-    <script src="js/cart.js" defer></script>
+
   </body>
 </html>

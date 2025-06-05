@@ -16,14 +16,34 @@ h2 {
     line-height: 3.9rem;
 }
 
+h3 {
+    font-size: 2.25rem;
+    line-height: 2.7rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+h5 {
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+}
+
 p {
     font-size: 1.2rem;
     line-height: 27px;
 }
 
+li {
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
 .section-header {
-    text-align: center;
-    max-width: 768px;
+    text-align: start;
+
     margin: 0 auto 80px;
 }
 
@@ -32,4 +52,12 @@ p {
     font-weight: 600;
     margin-bottom: 16px;
     display: inline-block;
+}
+
+
+
+/* --- Product Page --- */
+
+.product-info h2{
+    font-size: 2rem;
 }
