@@ -126,7 +126,6 @@
 .footer {
     background: linear-gradient(0deg, rgba(64, 63, 63, 0.15), rgba(64, 63, 63, 0.15)), #DDDACB;
     border-top: 2px solid #0B0B0A;
-    padding: 80px 0;
 }
 
 .footer-content {
@@ -160,7 +159,6 @@
     width: 24px;
     height: 24px;
     display: block;
-    background: #0B0B0A;
 }
 
 .footer-links h4 {
