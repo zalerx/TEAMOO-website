@@ -1,8 +1,3 @@
-/**
- * cart.js — Shopping cart overlay logic (vanilla JS, modular, accessible)
- * Requires: cart.css, cart HTML snippet present in page
- */
-
 // --- Config: Example products (simulate real products) ---
 const EXAMPLE_PRODUCTS = [
   { id: 'tea1', name: 'Green Tea', price: 29 },
@@ -43,7 +38,6 @@ const cartCheckoutBtn = document.querySelector('.cart-checkout-btn');
 function openCart() {
   cartOverlay.classList.add('active');
   cartPanel.classList.add('active');
-  // Accessibility: focus trap
   cartPanel.setAttribute('tabindex', '-1');
   cartPanel.focus();
 }
@@ -58,7 +52,7 @@ function updateCartBadge() {
   const cart = getCart();
   const count = cart.reduce((sum, item) => sum + item.qty, 0);
   if (cartBadge) {
-    cartBadge.textContent = count > 0 ? count : '';
+    cartBadge.textContent = count > 0 ? count : 0;
   }
 }
 
@@ -75,6 +69,7 @@ function renderCart() {
       const itemDiv = document.createElement('div');
       itemDiv.className = 'cart-item';
       itemDiv.innerHTML = `
+      <img src="assets/images/${item.name.toLowerCase().replace(/\s+/g, '-')}.png" alt="${item.name}" class="cart-item-image" loading="lazy">
         <div class="cart-item-info">
           <div class="cart-item-name">${item.name}</div>
           <div class="cart-item-price">$${item.price.toFixed(2)}</div>
@@ -83,7 +78,7 @@ function renderCart() {
           <button class="cart-qty-btn" aria-label="Decrease quantity" data-action="decrease" data-id="${item.id}">−</button>
           <span class="cart-item-qty" aria-live="polite">${item.qty}</span>
           <button class="cart-qty-btn" aria-label="Increase quantity" data-action="increase" data-id="${item.id}">+</button>
-          <button class="cart-remove-btn" aria-label="Remove ${item.name}" data-action="remove" data-id="${item.id}">🗑️</button>
+          <button class="cart-remove-btn" aria-label="Remove ${item.name}" data-action="remove" data-id="${item.id}"><i class="fa-solid fa-trash"></i></button>
         </div>
       `;
       cartItemsList.appendChild(itemDiv);
@@ -104,7 +99,7 @@ function addToCart(product) {
   if (item) {
     item.qty += qtyToAdd;
   } else {
-    cart.push({ ...product, qty: qtyToAdd });
+    cart.push({ ...product, qty: qtyToAdd});
   }
   saveCart(cart);
   renderCart();
@@ -171,7 +166,7 @@ function setupCartEvents() {
       }
     });
   }
-  // (Optional) Checkout button
+  // Checkout button
   if (cartCheckoutBtn) {
     cartCheckoutBtn.addEventListener('click', () => {
       // Simulate navigation to checkout

@@ -60,7 +60,6 @@
     position: relative;
     gap: 32px;
     display: flex;
-
 }
 
 .hero-decoration {
@@ -214,4 +213,50 @@
 .product-details summary {
    font-size: 1.2rem;
    font-weight: 600;
+}
+
+/* --- Checkout Page --- */
+
+
+.customer-info {
+    padding-top: 3.5rem;;
+}
+
+
+.checkout-section{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    align-items: center;
+    gap: 7rem;
+
+}
+
+.checkout-image {
+    position:absolute;
+    right: 0;
+    bottom: 40px;
+    height: 50%;
+    opacity: 0.2;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3.5rem;
+}
+
+.checkout {
+    position: relative;
+}
+
+.two-column {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+    gap: 0.5rem;
+}
+
+.three-column {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 0.5rem;
 }

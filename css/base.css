@@ -36,3 +36,18 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+input {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: var(--background);
+    padding: 12px;
+    border: 0.16rem solid var(--text); 
+    margin: 0.5rem;
+    border-radius: 1rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--accent);
+}

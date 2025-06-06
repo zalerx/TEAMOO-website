@@ -24,7 +24,7 @@
     .cart {
         display: none;
     }
-    
+
     .bars {
         display: block; 
     }
@@ -68,4 +68,7 @@
         flex-direction: column;
     }
 
+    .checkout-image {
+        display: none;
+    }
 }

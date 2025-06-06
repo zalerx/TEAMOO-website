@@ -134,7 +134,7 @@
 .cart-remove-btn {
   background: none;
   border: none;
-  color: #c62828;
+  color: var(--text);
   font-size: 1.2rem;
   cursor: pointer;
   margin-left: 0.5rem;
@@ -142,8 +142,15 @@
 }
 .cart-remove-btn:focus,
 .cart-remove-btn:hover {
-  color: #b71c1c;
-  outline: 2px solid #c62828;
+  color: var(--accent);
+}
+
+.cart-item img {
+  width: 6rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid var(--text);
 }
 
 /* Cart footer */

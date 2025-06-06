@@ -47,11 +47,23 @@
     align-items: center;
 }
 
-
 .logo {
     width: 103px;
     height: 26px;
     position: relative;
+}
+
+.nav-links a:hover{
+    color: var(--accent);
+    transition: all 0.3s ease;
+
+
+}
+
+.icons i:hover {
+    color: var(--accent);
+    transition: all 0.3s ease;
+
 }
 
 /* Product Cards */
@@ -244,13 +256,6 @@
     border-radius: 16px;
 }
 
-.product-details input {
-    padding: 8px;
-    border: 2px solid var(--text);
-    border-radius: 1rem;
-    font-size: 1rem;
-    background-color: var(--background);
-}
 
 
 /* --- Fullscreen Navigation Overlay --- */
@@ -308,3 +313,4 @@
 .fullscreen-nav-close:hover {
   color: #fff;
 }
+
