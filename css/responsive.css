@@ -21,14 +21,17 @@
         flex-direction: column;
     }
 
-    .cart {
+    .cart-trigger {
+        display: none;
+    }
+
+    .navbar-search-input {
         display: none;
     }
 
     .bars {
         display: block; 
     }
-
 
     .hero-decoration {
         position: absolute;
@@ -71,4 +74,8 @@
     .checkout-image {
         display: none;
     }
+
+
+
+    
 }

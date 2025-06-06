@@ -10,8 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const query = searchInput.value.trim();
       if (query) {
         localStorage.setItem('searchQuery', query);
-        window.location.href = 'browse.html?search=1';
+        window.location.href = 'search-results.html?search=1';
       }
     }
   });
 });
+

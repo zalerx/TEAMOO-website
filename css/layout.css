@@ -8,6 +8,7 @@
 .main-nav {
     display: flex;
     gap: 32px;
+    justify-self: flex-start;
 }
 
 .icons {

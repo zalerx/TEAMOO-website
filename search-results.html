@@ -17,29 +17,29 @@
   </head>
 
   <body>
-    <header class="header">
+     <header class="header">
       <div class="container">
-        <a href="index.html"><img class="logo" src="assets/icons/logo1.svg" alt="TEAMOO Logo" /></a>
-        <nav class="main-nav">
-          <div class="nav-links">
-            <a href="browse.html">Our Teas</a>
-            <a href="browse.html">Teawares</a>
-            <a href="#">Blog</a>
-            <a href="#">About Us</a>
-          </div>
-        </nav>
-
-        <div class="icons"> 
-            <div class="search">
-            <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+        <div class="nav-left">
+          <a href="index.html"><img class="logo" src="assets/icons/logo1.svg" alt="TEAMOO Logo" /></a>
+          <nav class="main-nav">
+              <a href="browse.html">Our Teas</a>
+              <a href="browse.html">Teawares</a>
+              <a href="#">Blog</a>
+              <a href="#">About Us</a>
+          </nav>
         </div>
-          <div class="cart">
-            <i class="fa-solid fa-cart-shopping fa-lg"></i>
-          </div>
-            <div class="bars">  <i class="fa-solid fa-bars fa-xl"></i>
-          </div>
+
+        <div class="nav-right"> 
+            <input class="navbar-search-input" type="text" placeholder="Search..." aria-label="Search" />
+            <button class="cart-trigger" aria-label="Open shopping cart">
+                <i class="fa-solid fa-cart-shopping fa-lg"></i>
+                <span class="cart-badge" aria-live="polite"></span>
+            </button>
   
-      </div>
+            <div class="bars">
+                <i class="fa-solid fa-bars fa-xl"></i>
+            </div>
+         </div>
     </header>
 
 
@@ -47,9 +47,8 @@
        <section class="browse-teas">
         <div class="container">
           <div class="section-header">
-            <span class="section-subtitle">Shop All > Tea > Green Tea</span>
-            <h2>Green Tea</h2>
-            <p>Explore our exquisite selection of rare loose-leaf green teas.</p>
+            <span class="section-subtitle">Search Results For:</span>
+            <h2 id="searchHeading"></h2>
           </div>
 
             <div class="product-grid">
@@ -100,14 +99,7 @@
               </div>
             </div>
 
-            <div class="product-card">
-              <img src="assets/images/oolong-tea.png" alt="Oolong Tea" />
-              <div class="product-card-info">
-                <h4>Jasmine Blossom</h4>
-                <p class="product-type">Loose</p>
-                <p class="product-price">$33</p>
-              </div>
-            </div>
+            
           </div>
           </div>
 
@@ -168,6 +160,42 @@
       </div>
     </footer>
 
+    <!-- Cart Overlay and Panel -->
+<div class="cart-overlay" tabindex="-1" aria-hidden="true"></div>
+<aside class="cart-panel" aria-modal="true" role="dialog" aria-label="Shopping cart" tabindex="-1">
+  <header class="cart-header">
+    <h2>Shopping Cart<h2>
+    <button class="cart-close" aria-label="Close cart">&times;</button>
+  </header>
+  <section class="cart-items" aria-live="polite"></section>
+  <footer class="cart-footer">
+    <div class="cart-total-row">
+      <h4>Total:</h4>
+      <h4 class="cart-total">$0.00</h4>
+    </div>
+    <button class="btn btn-primary cart-checkout-btn">Checkout</button>
+    <p class = "product-type">Taxes, discounts and shipping calculated at checkout</p>
+  </footer>
+</aside>
+
+<script src="js/cart.js"></script>
+
+  
+<!-- Fullscreen Navigation Overlay-->
+<div class="fullscreen-nav-overlay" id="fullscreenNav" tabindex="-1" aria-hidden="true">
+  <button class="fullscreen-nav-close" aria-label="Close navigation" id="closeNavBtn">&times;</button>
+  <nav class="fullscreen-nav-links" aria-label="Main navigation">
+    <h2 tabindex="0">Home</h2>
+    <h2 tabindex="0">Browse</h2>
+    <h2 tabindex="0">Product</h2>
+    <h2 id="cart" tabindex="0">Cart</h2>
+    <h2 tabindex="0">Checkout</h2>
+  </nav>
+</div>
+
+<script src="js/search.js"></script>
+<script src="js/nav.js"></script> 
+    <script src="js/results.js"></script>
 
   </body>
 </html>
