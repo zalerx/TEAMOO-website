@@ -34,20 +34,20 @@
         <div class="icons"> 
             <div class="search">
             <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-        </div>
-          <div class="cart">
-                    <button class="cart-trigger" aria-label="Open shopping cart">
+            </div>
+
+            <div class="cart">
+                <button class="cart-trigger" aria-label="Open shopping cart">
+                    <i class="fa-solid fa-cart-shopping fa-lg"></i>
+                    <span class="cart-badge" aria-live="polite"></span>
+                </button>
+            </div>
         
-                        <i class="fa-solid fa-cart-shopping fa-lg"></i>
-        <span class="cart-badge" aria-live="polite"></span>
-        </button>
-          </div>
-            <div class="bars"><i class="fa-solid fa-bars fa-xl"></i>
-          </div>
+            <div class="bars">
+                <i class="fa-solid fa-bars fa-xl"></i>
+            </div>
 
-
-  
-      </div>
+         </div>
     </header>
 
 
@@ -86,13 +86,15 @@
                             <li>Perfect for any occasion</li>
                         </ul>
 
-                        <form>
-                            <label for="quantity" style="display: block; margin-bottom: 4px;">Quantity:</label>
-                            <input type="number" id="quantity" name="quantity" min="1" max="100" value="1" />
-                        </form>
-
-                    <button class="btn btn-primary" onclick="addToCart({ id: 'tea1', name: 'Green Tea', price: 29 })">
-                        Add to Cart
+                    <form>
+                      <label for="quantity" style="display: block; margin-bottom: 4px;">Quantity:</label>
+                      <input type="number" id="quantity" name="quantity" min="1" max="100" value="1" />
+                    </form>
+                    <button
+                    class="btn btn-primary"
+                    onclick="addToCart({ id: 'tea1', name: 'Green Tea', price: 29, qty: parseInt(document.getElementById('quantity').value, 10) || 1 })"
+                    >
+                    Add to Cart
                     </button>
 
                     <details>
@@ -197,10 +199,8 @@
                         <p class="product-price">$33</p>
                     </div>
                 </div>
-
             </div>
             </div>
-
         </section> 
 
 
@@ -271,21 +271,66 @@
 <div class="cart-overlay" tabindex="-1" aria-hidden="true"></div>
 <aside class="cart-panel" aria-modal="true" role="dialog" aria-label="Shopping cart" tabindex="-1">
   <header class="cart-header">
-    <span class="cart-title">Your Cart</span>
+    <h2>Shopping Cart<h2>
     <button class="cart-close" aria-label="Close cart">&times;</button>
   </header>
   <section class="cart-items" aria-live="polite"></section>
   <footer class="cart-footer">
     <div class="cart-total-row">
-      <span>Total:</span>
-      <span class="cart-total">$0.00</span>
+      <h4>Total:</h4>
+      <h4 class="cart-total">$0.00</h4>
     </div>
-    <button class="cart-checkout-btn">Checkout</button>
+    <button class="btn btn-primary cart-checkout-btn">Checkout</button>
+    <p class = "product-type">Taxes, discounts and shipping calculated at checkout</p>
   </footer>
 </aside>
 
 <script src="js/cart.js"></script>
 
   
+<!-- Fullscreen Navigation Overlay (add once, near end of body) -->
+<div class="fullscreen-nav-overlay" id="fullscreenNav" tabindex="-1" aria-hidden="true">
+  <button class="fullscreen-nav-close" aria-label="Close navigation" id="closeNavBtn">&times;</button>
+  <nav class="fullscreen-nav-links" aria-label="Main navigation">
+    <h2 tabindex="0">Home</h2>
+    <h2 tabindex="0">Browse</h2>
+    <h2 tabindex="0">Product</h2>
+    <h2 class="cart-trigger" tabindex="0">Cart</h2>
+    <h2 tabindex="0">Checkout</h2>
+  </nav>
+</div>
+
+<script>
+  // Fullscreen nav open/close logic
+  const bars = document.querySelector('.bars');
+  const navOverlay = document.getElementById('fullscreenNav');
+  const closeNavBtn = document.getElementById('closeNavBtn');
+
+
+
+  if (bars && navOverlay && closeNavBtn) {
+    bars.addEventListener('click', () => {
+      navOverlay.classList.add('active');
+      navOverlay.setAttribute('aria-hidden', 'false');
+      closeNavBtn.focus();
+    });
+    closeNavBtn.addEventListener('click', () => {
+      navOverlay.classList.remove('active');
+      navOverlay.setAttribute('aria-hidden', 'true');
+      bars.querySelector('i').focus();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (navOverlay.classList.contains('active') && e.key === 'Escape') {
+        navOverlay.classList.remove('active');
+        navOverlay.setAttribute('aria-hidden', 'true');
+        bars.querySelector('i').focus();
+      }
+    });
+
+    
+  }
+</script>
+
+
   </body>
 </html>
