@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Browse Page</title>
+    <title>Checkout Page</title>
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/typography.css" />
@@ -42,16 +42,54 @@
       </div>
     </header>
 
-            <section class="checkout-section">
-            <div class="container">
-                <div class="checkout-content">
-                    <h3>Ready to enjoy this tea?</h3>
-                    <p>Add it to your cart and experience the exquisite taste of our premium loose-leaf tea.</p>
-                    <a href="checkout.html" class="btn btn-primary">Go to Checkout</a>
-                </div>
-            </div>
 
-        </section>
+
+    <section class="checkout">
+      <div class="container">
+          <h2>Checkout</h2>
+          <form>
+            <div class="checkout-section">
+              <div class="customer-info">
+                <div class="info-box">
+                  <h3>Contact</h3>
+                  <input type="email" placeholder="Email" required />
+                </div>
+
+                <div class="info-box">
+                  <h3> Delivery</h3>
+                  <input type="text" placeholder="Full Name" required />
+                  <input type-="text" placeholder="Last Name" required />
+                  <input type="text" placeholder="Address" required />
+
+                  <input type="text" placeholder="City" required />
+                  <input type="text" placeholder="State/Province" required />
+                  <input type="text" placeholder="Postal Code" required />
+                  <input type="text" placeholder="Phone Number" />
+                </div>
+
+                <div class="info-box">
+                  <h3>Payment</h3>
+                  <input type="text" placeholder="Card Number" required />
+                  <input type="text" placeholder="Name on Card" required />
+                  <input type="text" placeholder="Expiry Date (MM/YY)" required />
+                  <input type="text" placeholder="CVV" required />
+                </div>
+              </div>
+              
+    
+              <div class="order-details">
+                <h3>Order Summary</h3>
+              </div>
+    
+            </div>
+          </form>
+
+  
+          <img src="assets/images/teapot.svg" alt="teapot" class="checkout-image" />
+      </div>
+    </section>
+
+
 
 
     <footer class="footer">
@@ -113,3 +151,90 @@
 
   </body>
 </html>
+
+<!-- Checkout Form Section: Country/Region and Address Autocomplete -->
+<form id="checkout-form" autocomplete="off" style="max-width: 500px; margin: 2rem auto;">
+  <label for="country" style="display:block; margin-bottom:4px;">Country/Region</label>
+  <input type="text" id="country" name="country" list="country-list" placeholder="Start typing country..." required style="width:100%;margin-bottom:1rem;">
+  <datalist id="country-list"></datalist>
+
+  <label for="address" style="display:block; margin-bottom:4px;">Address</label>
+  <input type="text" id="address" name="address" placeholder="Search address..." autocomplete="off" required style="width:100%;margin-bottom:1rem;">
+  <div id="address-suggestions" style="position:relative;z-index:10;"></div>
+
+  <label for="city" style="display:block; margin-bottom:4px;">City</label>
+  <input type="text" id="city" name="city" required style="width:100%;margin-bottom:1rem;">
+
+  <label for="state" style="display:block; margin-bottom:4px;">State/Province</label>
+  <input type="text" id="state" name="state" required style="width:100%;margin-bottom:1rem;">
+
+  <label for="postal" style="display:block; margin-bottom:4px;">Postal Code</label>
+  <input type="text" id="postal" name="postal" required style="width:100%;margin-bottom:1rem;">
+</form>
+
+<script>
+// --- Country List (static, partial for demo; expand as needed) ---
+const countries = [
+  "Australia", "Canada", "China", "France", "Germany", "India", "Japan", "New Zealand", "Singapore", "United Kingdom", "United States"
+];
+const countryList = document.getElementById('country-list');
+if (countryList) {
+  countries.forEach(c => {
+    const opt = document.createElement('option');
+    opt.value = c;
+    countryList.appendChild(opt);
+  });
+}
+
+// --- Address Autocomplete (simulate with hardcoded addresses) ---
+const addresses = [
+  { address: "123 Queen St, Melbourne VIC", city: "Melbourne", state: "VIC", postal: "3000" },
+  { address: "456 George St, Sydney NSW", city: "Sydney", state: "NSW", postal: "2000" },
+  { address: "789 Collins St, Docklands VIC", city: "Docklands", state: "VIC", postal: "3008" },
+  { address: "10 Downing St, London", city: "London", state: "", postal: "SW1A 2AA" }
+];
+
+const addressInput = document.getElementById('address');
+const suggestionsDiv = document.getElementById('address-suggestions');
+const cityInput = document.getElementById('city');
+const stateInput = document.getElementById('state');
+const postalInput = document.getElementById('postal');
+
+if (addressInput && suggestionsDiv) {
+  addressInput.addEventListener('input', function() {
+    const val = this.value.trim().toLowerCase();
+    suggestionsDiv.innerHTML = '';
+    if (val.length < 2) return;
+    const matches = addresses.filter(a => a.address.toLowerCase().includes(val));
+    if (matches.length === 0) return;
+    const list = document.createElement('ul');
+    list.style.position = 'absolute';
+    list.style.background = '#fff';
+    list.style.border = '1px solid #ccc';
+    list.style.width = '100%';
+    list.style.listStyle = 'none';
+    list.style.padding = '0';
+    list.style.margin = '0';
+    list.style.zIndex = '100';
+    matches.forEach(a => {
+      const li = document.createElement('li');
+      li.textContent = a.address;
+      li.style.padding = '0.5rem 1rem';
+      li.style.cursor = 'pointer';
+      li.addEventListener('mousedown', function(e) {
+        e.preventDefault();
+        addressInput.value = a.address;
+        cityInput.value = a.city;
+        stateInput.value = a.state;
+        postalInput.value = a.postal;
+        suggestionsDiv.innerHTML = '';
+      });
+      list.appendChild(li);
+    });
+    suggestionsDiv.appendChild(list);
+  });
+
+  // Hide suggestions on blur (with slight delay for click)
+  addressInput.addEventListener('blur', () => setTimeout(() => suggestionsDiv.innerHTML = '', 150));
+}
+</script>
