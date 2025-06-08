@@ -8,14 +8,23 @@
 .main-nav {
     display: flex;
     gap: 32px;
-    justify-self: flex-start;
 }
 
-.icons {
+.main-nav a:hover {
+    color: var(--accent);
+    transition: all 0.3s ease;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-right {
     display: flex;
     gap: 16px;
 }
-
 
 .bars {
     display: none; 
@@ -129,24 +138,18 @@
 }
 
 .benefits-list {
-    list-style: none;
+    list-style: circle;
     margin: 24px 0;
 }
 
 .benefits-list li {
-    display: flex;
+    list-style-position: inside; 
+
     align-items: center;
-    gap: 16px;
     padding: 8px 0;
 }
 
-.benefits-list li::before {
-    content: "";
-    width: 16px;
-    height: 16px;
-    background: #0B0B0A;
-    display: inline-block;
-}
+
 
 /* Blog Section */
 .blog-section {
@@ -220,16 +223,10 @@
 
 
 .customer-info {
-    padding-top: 3.5rem;;
-}
-
-
-.checkout-section{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
-    align-items: center;
-    gap: 7rem;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 2rem;
 }
 
 .checkout-image {
@@ -238,6 +235,13 @@
     bottom: 40px;
     height: 50%;
     opacity: 0.2;
+    z-index: -1;
+}
+
+.checkout-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    gap: 7rem;
 }
 
 .info-box {
@@ -260,4 +264,85 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
     gap: 0.5rem;
+}
+
+.order-summary {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 2rem;
+    justify-content: flex-start;
+}
+
+.discount-code {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+#code {
+    width: 100%;
+}
+
+.checkout-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.checkout-subtotal div{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+
+.checkout-subtotal {
+    width: 90%;
+    align-self: center;
+}
+
+.checkout-total {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    align-self: center;
+}
+
+/*--- Order Summary Page ---*/
+
+.main-summary {
+    display: flex;
+    gap: 4rem;
+
+}
+
+.summary-left {
+    width: 60%;
+}
+
+.order-details {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+
+.order-details div {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.user-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+
+}
+
+.summary-right {
+    width: 40%;
+
 }

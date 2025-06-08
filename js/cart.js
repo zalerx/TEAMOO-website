@@ -6,18 +6,17 @@ const EXAMPLE_PRODUCTS = [
 ];
 
 // --- Cart State Management ---
-const CART_KEY = 'shopping_cart_v1';
 
 function getCart() {
   try {
-    return JSON.parse(localStorage.getItem(CART_KEY)) || [];
+    return JSON.parse(localStorage.getItem('cart')) || [];
   } catch {
     return [];
   }
 }
 
 function saveCart(cart) {
-  localStorage.setItem(CART_KEY, JSON.stringify(cart));
+  localStorage.setItem('cart', JSON.stringify(cart));
 }
 
 function findCartItem(cart, id) {
@@ -63,7 +62,9 @@ function renderCart() {
 
   if (cart.length === 0) {
     cartItemsList.innerHTML = '<div class="cart-empty" aria-live="polite">Your cart is empty.</div>';
+    cartCheckoutBtn.disabled = true;
   } else {
+    cartCheckoutBtn.disabled = false;
     cart.forEach(item => {
       total += item.price * item.qty;
       const itemDiv = document.createElement('div');
@@ -169,9 +170,9 @@ function setupCartEvents() {
   // Checkout button
   if (cartCheckoutBtn) {
     cartCheckoutBtn.addEventListener('click', () => {
-      // Simulate navigation to checkout
       window.location.href = 'checkout.html';
-    });
+    })
+    ;
   }
 }
 

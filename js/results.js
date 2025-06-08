@@ -4,6 +4,6 @@
     const query = localStorage.getItem('searchQuery');
 
     if (query && searchHeading) {
-      searchHeading.textContent = `Results for: "${query}"`;
+      searchHeading.textContent = `"${query}"`;
     }
   });

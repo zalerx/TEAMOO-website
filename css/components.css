@@ -7,8 +7,8 @@
     justify-content: center;
     padding: 0.8rem 2rem;
     border-radius: 100px;
-    font-family: 'Quicksand', sans-serif;
     font-weight: 600;
+    font-family: inherit;
     font-size: 1.2rem;
     line-height: 2rem;
     text-decoration: none;
@@ -313,4 +313,6 @@
 .fullscreen-nav-close:hover {
   color: var(--accent);
 }
+
+/* --- Checkout Page --- */
 
