@@ -94,8 +94,23 @@
                   </div>
 
                   <div class="checkbox-group">
-                    <input type="checkbox" id="news"/>
-                    <label for="news">Use shipping address as billing address</label>
+                    <input type="checkbox" id="same-billing" checked />
+                    <label for="same-billing">Use shipping address as billing address</label>
+                  </div>
+                  <div id="billing-address-section" style="display: none; margin-top: 1em;">
+                    <h4>Billing Address</h4>
+                    <div class="two-column">
+                      <input name="billing-first-name" type="text" placeholder="First Name" />
+                      <input name="billing-last-name" type="text" placeholder="Last Name" />
+                    </div>
+                    <input name="billing-address" type="text" placeholder="Address" />
+                    <input name="billing-country" type="text" placeholder="Country/Region" />
+                    <div class="three-column">
+                      <input name="billing-city" type="text" placeholder="City" />
+                      <input name="billing-state" type="text" placeholder="State/Province" />
+                      <input name="billing-zip" type="text" placeholder="Postal Code" />
+                    </div>
+                    <input name="billing-phone" type="text" placeholder="Phone Number" />
                   </div>
 
                 </div>

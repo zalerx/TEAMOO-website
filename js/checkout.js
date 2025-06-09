@@ -5,6 +5,18 @@
     const orderSubTotal = document.querySelector('.subtotal');
     const orderShipping = document.querySelector('.shipping');
     const form = document.querySelector('form[name="checkout-form"]');
+    const sameBillingCheckbox = document.getElementById('same-billing');
+    const billingSection = document.getElementById('billing-address-section');
+
+    // Show/hide billing address section based on checkbox
+    if (sameBillingCheckbox && billingSection) {
+        const toggleBillingSection = () => {
+            billingSection.style.display = sameBillingCheckbox.checked ? 'none' : 'block';
+        };
+        sameBillingCheckbox.addEventListener('change', toggleBillingSection);
+        // Set initial state
+        toggleBillingSection();
+    }
 
     let total = 0;
     let subtotal = 0;
@@ -38,28 +50,65 @@
             event.preventDefault();
 
             const formData = new FormData(form);
-            const orderDetails = {
+
+            // Shipping address
+            const shipping = {
                 firstName: formData.get('first-name'),
                 lastName: formData.get('last-name'),
-                email: formData.get('email'),
                 address: formData.get('address'),
                 country: formData.get('country'),
                 city: formData.get('city'),
                 state: formData.get('state'),
                 zip: formData.get('zip'),
+                phone: formData.get('phone')
+            };
+
+            // Billing address
+            let billing;
+            if (sameBillingCheckbox && sameBillingCheckbox.checked) {
+                billing = { ...shipping };
+            } else {
+                billing = {
+                    firstName: formData.get('billing-first-name'),
+                    lastName: formData.get('billing-last-name'),
+                    address: formData.get('billing-address'),
+                    country: formData.get('billing-country'),
+                    city: formData.get('billing-city'),
+                    state: formData.get('billing-state'),
+                    zip: formData.get('billing-zip'),
+                    phone: formData.get('billing-phone')
+                };
+            }
+
+            const orderDetails = {
+                firstName: shipping.firstName,
+                lastName: shipping.lastName,
+                email: formData.get('email'),
+                address: shipping.address,
+                country: shipping.country,
+                city: shipping.city,
+                state: shipping.state,
+                zip: shipping.zip,
+                phone: shipping.phone,
+                billingFirstName: billing.firstName,
+                billingLastName: billing.lastName,
+                billingAddress: billing.address,
+                billingCountry: billing.country,
+                billingCity: billing.city,
+                billingState: billing.state,
+                billingZip: billing.zip,
+                billingPhone: billing.phone,
                 cardNum: formData.get('card-num'),
-                cardExp: formData.get('card-exp'),
+                expiry: formData.get('card-exp'),
                 items: cart,
                 total: total
             };
-// Debug log to validate orderDetails before saving
-            console.log('Saving orderDetails to localStorage:', orderDetails);
 
             console.log('Order Details:', orderDetails);
             localStorage.setItem('checkoutData', JSON.stringify(orderDetails));
-            localStorage.removeItem('cart'); 
+            localStorage.removeItem('cart');
 
-            window.location.href = 'summary.html'; 
+            window.location.href = 'summary.html';
         });
     }
     
