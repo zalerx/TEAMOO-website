@@ -326,6 +326,7 @@
     display: flex;
     flex-direction: column;
     margin: 1rem 0;
+    width: 80%;
 }
 
 .order-details div {
@@ -344,5 +345,44 @@
 
 .summary-right {
     width: 40%;
-
 }
+
+.user-details div {
+    padding-top: 1rem;
+}
+
+.user-details h4 {
+    padding-bottom: 0.5rem;
+}
+
+.user-details p {
+    padding: 0 0.5rem;
+}
+
+.summary-items {
+    padding-top: 1rem;
+}
+
+.summary-totals div{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.2rem ;
+}
+
+.summary-actions {
+
+    width: max-content;
+    justify-self: center;
+    padding-top: 2rem;
+}
+
+.summary-actions p {
+    justify-self: center;
+}
+
+.summary-buttons {
+    display: flex;
+    gap: 2rem;
+    padding-top: 1rem;
+}
+
