@@ -1,4 +1,11 @@
 /* Header layout */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #DDDACB; /* Match site header background */
+    border-bottom: 2px solid #0B0B0A;
+}
 .header .container {
     display: flex;
     justify-content: space-between;
@@ -93,6 +100,19 @@
     border-bottom: 2px solid #0B0B0A;
 }
 
+.featured-teas .section-header {
+    text-align: center;
+}
+
+.featured-teas .container {
+    position: relative;
+}
+
+.featured-teas .leaves {
+    left: 0;
+    top: 0;
+}
+
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -161,6 +181,20 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 48px;
     margin-bottom: 64px;
+}
+
+
+/* ---- Browse Page ---- */
+.browse-teas .leaves {
+    right: 0;
+    top: 0;
+}
+
+.browse-teas .header-decoration {
+    opacity: 0.075;
+    width: 400px;
+    position: absolute;
+    top: 150px;
 }
 
 
