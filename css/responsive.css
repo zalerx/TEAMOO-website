@@ -42,6 +42,14 @@
         z-index: 0;
     }
     
+    .header-decoration {
+        display: none;
+    }
+
+    .leaves {
+        display: none;
+    }
+
     .cta-group {
         z-index: 1;
     }
